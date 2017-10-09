@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// components
+import Searchbar from './Searchbar'
+
 class Header extends Component {
 
 
@@ -17,9 +20,10 @@ class Header extends Component {
 		  default:
 		    return (
 		    	<div>
-			    	<span>hello, {this.props.auth.name}</span>
-			    	<br />
+			    	<span>hello, {this.props.auth.name}</span> || 
 			    	<a href="/api/logout">Log Out</a>
+			    	<br />
+			    	<Searchbar />
 		    	</div>
 		    );
 		}
